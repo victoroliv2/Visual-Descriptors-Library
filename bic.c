@@ -3,7 +3,7 @@
 static inline int bin (double k)
 {
   int i, b;
-  unsigned char v = k * 256; /* k \in [0,1] */
+  unsigned char v = k * 255; /* k \in [0,1] */
   unsigned char bin [BIN+1] = { 0, 64, 128, 192, 255 };
 
   for (b=0; b < BIN; b++)
