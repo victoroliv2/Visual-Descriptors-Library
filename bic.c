@@ -68,8 +68,8 @@ void bic_extract (double *image, int w, int h, struct bic_t *d)
 
   for (b=0; b < BINS; b++)
     {
-      d->hist_low[b]  = (hist_low[b]  * 256) / (w*h);
-      d->hist_high[b] = (hist_high[b] * 256) / (w*h);
+      d->hist_low[b]  = (hist_low[b]  * 255) / (w*h);
+      d->hist_high[b] = (hist_high[b] * 255) / (w*h);
     }
 }
 
