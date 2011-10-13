@@ -3,7 +3,7 @@
 static inline int bin (double k)
 {
   int i, b;
-  unsigned char v = k * 256; /* k \in [0,1] */
+  unsigned char v = k * 255; /* k \in [0,1] */
   unsigned char bin [BIN+1] = { 0, 64, 128, 192, 255 };
 
   for (b=0; b < BIN; b++)
@@ -68,8 +68,8 @@ void bic_extract (double *image, int w, int h, struct bic_t *d)
 
   for (b=0; b < BINS; b++)
     {
-      d->hist_low[b]  = (hist_low[b]  * 256) / (w*h);
-      d->hist_high[b] = (hist_high[b] * 256) / (w*h);
+      d->hist_low[b]  = (hist_low[b]  * 255) / (w*h);
+      d->hist_high[b] = (hist_high[b] * 255) / (w*h);
     }
 }
 
