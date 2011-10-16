@@ -11,13 +11,7 @@
 
 #define BINS (BIN*BIN*BIN)
 
-struct bic_t
-{
-  unsigned char hist_low  [BINS];
-  unsigned char hist_high [BINS];
-};
-
-void bic_extract (double *image, int w, int h, struct bic_t *d);
-int bic_distance (struct bic_t *d1, struct bic_t *d2);
+void bic_extract (unsigned char *image, int w, int h, double *d);
+double bic_distance (double *d1, double *d2);
 
 #endif

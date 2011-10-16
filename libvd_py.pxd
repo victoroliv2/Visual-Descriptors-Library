@@ -2,8 +2,5 @@
 
 cdef extern from "bic.h":
 
-    cdef struct bic_t:
-      pass
-
-    void bic_extract (double *image, int w, int h, bic_t *d)
-    int bic_distance (bic_t *d1, bic_t *d2)
+    void bic_extract (unsigned char *image, int w, int h, double *d)
+    double bic_distance (double *d1, double *d2)
